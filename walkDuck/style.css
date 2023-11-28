@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #48BEFE;
+}
+
+.container {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cloud,
+.cloud-1,
+.cloud-2,
+.cloud-3,
+.cloud-4 {
+    position: absolute;
+    background-color: white;
+    height: 35px;
+    width: 120px;
+    border-radius: 120px;
+    top: 100px;
+    left: 250px;
+}
+
+.cloud {
+    top: 15%;
+    left: 15%;
+    animation: cloud 10s 8s infinite linear;
+}
+
+.cloud-1 {
+    top: 40%;
+    left: 5%;
+    animation: cloud 10s infinite linear;
+}
+
+.cloud-2 {
+    top: 15%;
+    left: 70%;
+    animation: cloud 10s 5s infinite linear;
+}
+
+.cloud-3 {
+    top: 32%;
+    left: 40%;
+    animation: cloud 10s 2s infinite linear;
+}
+
+.cloud-4 {
+    top: 29%;
+    left: 60%;
+    animation: cloud 10s 1s infinite linear;
+}
+
+.cloud:before,
+.cloud-1:before,
+.cloud-2:before,
+.cloud-3:before,
+.cloud-4:before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    left: 20px;
+    bottom: 10px;
+}
+
+.cloud:after,
+.cloud-1:after,
+.cloud-2:after,
+.cloud-3:after,
+.cloud-4:after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    left: 70px;
+    bottom: 15px;
+}
+
+@keyframes cloud {
+    100% {
+        transform: translateX(calc(-100vw + 20px));
+    }
+}
+
+.body__container {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.shadow {
+    background-color: #39a4f0;
+    height: 18px;
+    width: 110px;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 20%;
+    left: 38%;
+    margin: auto;
+    z-index: -2;
+    animation: shadow 3s linear infinite;
+}
+
+@keyframes shadow {
+    50% {
+        transform: scaleX(1.3)
+    }
+}
+
+.body {
+    position: absolute;
+    height: 65px;
+    width: 100px;
+    background-color: #ffec02;
+    border-radius: 100px 100px 0 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    animation: body 0.8s infinite;
+}
+
+@keyframes body{
+    50%{
+        top: 230px;
+    }
+}
+
+.body:before {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    background-color: #ffec02;
+    border-radius: 15px 0 150px 150px;
+    right: 0;
+    top: 65px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    animation: eye 2.5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes eye {
+
+    0%,
+    100% {
+        height: 20px;
+    }
+
+    50% {
+        height: 0px;
+    }
+}
+
+.ben {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FAB005;
+    left: 40%;
+    top: 70%;
+}
+
+.ears {
+    position: absolute;
+    height: 35px;
+    width: 12px;
+    border-radius: 35px;
+    background: #ffec02;
+    left: 37px;
+    top: -20px;
+    transform: rotate(-10deg);
+}
+
+.ears:before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 12px;
+    border-radius: 35px;
+    background: #ffec02;
+    left: 10px;
+    top: 5px;
+    transform: rotate(25deg);
+}
+
+.kol {
+    position: absolute;
+    background: #FAB005;
+    height: 37px;
+    width: 74px;
+    border-radius: 10px 10px 74px 74px;
+    top: 55px;
+    transform-origin: right;
+    left: -40px;
+    z-index: 3;
+    animation: kol 1s infinite linear;
+}
+
+@keyframes kol {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.gaga {
+    position: absolute;
+    background: #F17C00;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: -1;
+    top: 49%;
+    right: 39%;
+    transform: rotate(35deg);
+    animation: body 0.8s infinite;
+}
+
+.legs__right,
+.legs__left {
+    position: absolute;
+    background: #F07C06;
+    width: 13px;
+    height: 50px;
+    z-index: -1;
+    transform-origin: top;
+    transform: rotate(-45deg);
+    left: 50%;
+    bottom: 26%;
+    animation: walk 1s infinite;
+}
+
+.legs__right::before,
+.legs__left::before {
+    content: "";
+    position: absolute;
+    background: #F07C06;
+    height: 13px;
+    width: 40px;
+    left: -50%;
+    border-radius: 40px;
+    bottom: 0%;
+}
+
+.legs__right {
+    animation-delay: 0.5s;
+}
+
+@keyframes walk {
+    33.33% {
+        transform: translateY(20px) rotate(0deg);
+    }
+
+    66.66% {
+        transform: translate(-25px, 10px) rotate(30deg);
+    }
+}
